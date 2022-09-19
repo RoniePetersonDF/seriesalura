@@ -24,4 +24,12 @@ class SerieController extends Controller
         return to_route('series.index');
     }
 
+    public function destroy(Request $request, $id)
+    {
+        $serie = Serie::findOrFail($id);
+        $serie->delete();
+
+        return to_route('series.index');
+    }
+
 }

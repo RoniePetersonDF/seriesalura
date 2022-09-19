@@ -17,9 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/series', [App\Http\Controllers\SerieController::class, 'index'])
-        ->name('series.index');
-Route::get('/series/create', [App\Http\Controllers\SerieController::class, 'create'])
-        ->name('series.create');
-Route::post('/series', [App\Http\Controllers\SerieController::class, 'store'])
-        ->name('series.store');
+Route::resource('/series', App\Http\Controllers\SerieController::class);
