@@ -7,11 +7,11 @@
 
         <a href="{{route('series.create')}}" rel="noopener noreferrer" class="btn btn-success">Novo</a>
     <hr>
-    <ul>
+    <ul class="list-group">
         @forelse ($series as $serie)
-            <li>{{$serie->name}}</li>
+            <li class="list-group-item">{{$serie->name}}</li>
         @empty
-            <li>Não existem itens</li>
+            <li class="list-group-item">Não existem itens</li>
         @endforelse
     </ul>
 @endsection
